@@ -1,0 +1,4 @@
+__pycache__/
+.mypy_cache/
+# For libraries, we should not lock the dependencies.
+/pyproject.lock
