@@ -52,3 +52,12 @@ def test_str(multi_error1):
     # We *could* test the literal output, but I just want a sanity check.
     # The output is meant to be human-readable; it does not have a schema.
     assert isinstance(s, str) and len(s) > 20
+
+
+def test_split(multi_error1):
+    match, rest = MultiError.split(RuntimeError, multi_error1)
+    assert (
+        repr(match) ==
+        'MultiError([RuntimeError, MultiError([RuntimeError])])'
+    )
+    assert repr(rest) == 'MultiError([MultiError([ValueError])])'
