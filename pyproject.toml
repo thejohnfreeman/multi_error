@@ -6,6 +6,7 @@ authors = ["John Freeman <jfreeman08@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "*"
+async_generator = "^1.10"
 
 [tool.poetry.dev-dependencies]
 pytest = "^3.0"
